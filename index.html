@@ -8,12 +8,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="top">
       <div class="container">
-        <nav class="top__nav">
+        <nav class="top__nav" >
           <div class="top__logo">
             <a class="top__logo-link" href="index.html">Liana Harper</a>
           </div>
@@ -28,23 +29,26 @@
               <a href="contacts.html" class="top__menu-link">Contacts</a>
             </li>
           </ul>
-          <div class="top__menu-burger">
-            <a class="top__burger-btn" href="#">Menu</a>
+          <div class="top__menu-burger" x-data="{ open: false }">
+            <button class="top__burger-btn"   @click="open = true" href="#">Menu</button>
+            <div class="top__burger" x-show="open"
+            @click.away="open = false">
+              <ul class="top__list" >
+                <li class="top__list-item">
+                  <a class="top__list-link" href="index.html">Main</a>
+                </li>
+                <li class="top__list-item">
+                  <a class="top__list-link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="top__list-item">
+                  <a class="top__list-link" href="contacts.html">Contacts</a>
+                </li>
+              </ul>
+            </div>
+        
           </div>
         </nav>
-        <div class="top__burger">
-          <ul class="top__list">
-            <li class="top__list-item">
-              <a class="top__list-link" href="index.html">Main</a>
-            </li>
-            <li class="top__list-item">
-              <a class="top__list-link" href="portfolio.html">Portfolio</a>
-            </li>
-            <li class="top__list-item">
-              <a class="top__list-link" href="contacts.html">Contacts</a>
-            </li>
-          </ul>
-        </div>
+
       </div>
     </div>
     <header class="header">

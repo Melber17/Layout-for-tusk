@@ -28,23 +28,26 @@
               <a href="contacts.html" class="top__menu-link active">Contacts</a>
             </li>
           </ul>
-          <div class="top__menu-burger">
-            <a class="top__burger-btn" href="#">Menu</a>
+          <div class="top__menu-burger" x-data="{ open: false }">
+            <button class="top__burger-btn"   @click="open = true" href="#">Menu</button>
+            <div class="top__burger" x-show="open"
+            @click.away="open = false">
+              <ul class="top__list" >
+                <li class="top__list-item">
+                  <a class="top__list-link" href="index.html">Main</a>
+                </li>
+                <li class="top__list-item">
+                  <a class="top__list-link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="top__list-item">
+                  <a class="top__list-link" href="contacts.html">Contacts</a>
+                </li>
+              </ul>
+            </div>
+        
           </div>
         </nav>
-        <div class="top__burger">
-          <ul class="top__list">
-            <li class="top__list-item">
-              <a class="top__list-link" href="index.html">Main</a>
-            </li>
-            <li class="top__list-item">
-              <a class="top__list-link" href="portfolio.html">Portfolio</a>
-            </li>
-            <li class="top__list-item">
-              <a class="top__list-link " href="contacts.html">Contacts</a>
-            </li>
-          </ul>
-        </div>
+
       </div>
     </div>
     <div class="Liana__main contact-Liana__main">

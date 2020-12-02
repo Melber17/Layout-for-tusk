@@ -79,6 +79,11 @@
 .top__burger-btn {
     font-size:28px;
     font-weight: 400;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 .top__menu-link {
     font-weight: 300;
@@ -97,12 +102,13 @@
     width: 100%;
     max-width: 100%;
     height: calc(100% - 90px);
-    left: -5000px;
+    left: 0;
     background: #333333;
     top: 90px;
     padding: 40px;
     z-index: 50;
     transition:.7s;
+  
 }
 .top__burger.open {
     left:0;
@@ -125,9 +131,6 @@
     width:100%;
     padding-top: 80px;
 }
-.header__card {
-
-}
 .header__content {
     width:100%;
     display: flex;
@@ -135,13 +138,6 @@
     text-align: center;
 }
 
-.header__img {
-
-}
-
-.header__text {
-
-}
 
 .header__title {
     font-size:36px;
